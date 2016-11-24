@@ -16,12 +16,13 @@ I'd like to say thank you to [真紀さん][Maki], [Junさん][Jun] and
   [l8]: http://www.lang-8.com
   [l8c]: http://www.lang-8.com/1242214/journals/299284927123172493500613912446169418700
 
-Recording is available at [SoundCloud][sc].
+Recording is available at [SoundCloud][sc] and [YouTube][yt].
 
 Drums and synths were made in [LMMS][lmms]. Scores can be viewed and edited
 using [MuseScore][ms]. For convenience, a PDF version is also available.
 
   [sc]: https://soundcloud.com/athoshun/tadoushi-to-jidoushi-no-tango
+  [yt]: https://www.youtube.com/watch?v=94g7_1C0Ka4
   [lmms]: http://lmms.sourceforge.net/home.php
   [ms]: http://musescore.org/
 
