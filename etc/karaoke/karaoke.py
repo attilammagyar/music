@@ -72,6 +72,8 @@ def main(argv):
         )
         return 2
 
+    return 0
+
 
 def render_karaoke(input_name, output, first_stanza, last_stanza):
     lyrics_raw = ""
@@ -90,6 +92,9 @@ def render_karaoke(input_name, output, first_stanza, last_stanza):
     last_stanza = max(0, last_stanza)
     first_stanza = max(first_stanza - 1, 0)
     first_stanza = min(first_stanza, len(lyrics.stanzas))
+
+    if last_stanza < 1:
+        last_stanza = len(lyrics.stanzas)
 
     stanzas = lyrics.stanzas[first_stanza:last_stanza]
 
