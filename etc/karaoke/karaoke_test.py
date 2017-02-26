@@ -189,25 +189,6 @@ s3-l1-n1 s3-l1-n2
         self.assertEqual([401], lyrics.stanzas[0].lines[0].notes[0].durations)
         self.assertEqual([6, 13, 7], lyrics.stanzas[0].lines[1].notes[1].durations)
 
-    def test_leading_and_trailing_spaces_in_a_note_become_zero_length_notes(self):
-        lyrics = self.parse("{FPS=100} {BPM=60} {1/4,  note    }{1/4,x}")
-        notes = lyrics.stanzas[0].lines[0].notes
-        self.assertEqual(
-            "[0,200]\n[0,200] [0,0]   [0,100]note [100,100]     [100,200]x\n",
-            self.lyrics_to_str(lyrics, with_frames=True)
-        )
-        self.assertEqual("  ", notes[0].text)
-        self.assertEqual("    ", notes[2].text)
-
-    def test_space_only_notes_are_left_as_is(self):
-        lyrics = self.parse("{FPS=100} {BPM=60} {1/4,  }{1/4,x}")
-        notes = lyrics.stanzas[0].lines[0].notes
-        self.assertEqual(
-            "[0,200]\n[0,200] [0,100]   [100,200]x\n",
-            self.lyrics_to_str(lyrics, with_frames=True)
-        )
-        self.assertEqual("  ", notes[0].text)
-
     def test_calculating_reveal_positions_by_frame_number(self):
         lyrics = self.parse(
 """

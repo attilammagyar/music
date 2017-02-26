@@ -289,7 +289,6 @@ class Parser:
     SETTING_RE = re.compile(r"^([A-Z0-9_]+)=(.*)$")
     NOTE_RE = re.compile(r"^(!{0,2})(([0-9]+(/[1-9][0-9]*)?,)+)([^|]*)(\|(.*))?$")
     #                       1:hl    2:durations                5:text    7:ruby
-    SPACES_RE = re.compile(r"^(\s*)\S*(\s*)$")
     COLOR_RE = re.compile(r"^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$")
 
     stanzas = None
@@ -430,13 +429,6 @@ class Parser:
         text = match.group(5)
         ruby = match.group(7) or ""
 
-        spaces = self.SPACES_RE.match(text)
-        leading, trailing = "", ""
-
-        if spaces and text.strip() != "":
-            leading, trailing = spaces.group(1), spaces.group(2)
-            text = text.strip()
-
         first_frame = self.seconds_to_frames(self.time)
         self.time += sum(duration_seconds)
         last_frame = self.seconds_to_frames(self.time)
@@ -454,21 +446,6 @@ class Parser:
 
         self.has_notes = True
 
-        if leading:
-            self.notes.append(
-                Note(
-                    self.draw,
-                    leading,
-                    "",
-                    self.style,
-                    highlight,
-                    [0],
-                    first_frame,
-                    first_frame,
-                    self.fonts
-                )
-            )
-
         self.notes.append(
             Note(
                 self.draw,
@@ -482,22 +459,6 @@ class Parser:
                 self.fonts
             )
         )
-
-        if trailing:
-            self.notes.append(
-                Note(
-                    self.draw,
-                    trailing,
-                    "",
-                    self.style,
-                    highlight,
-                    [0],
-                    last_frame,
-                    last_frame,
-                    self.fonts
-                )
-            )
-
 
     def seconds_to_frames(self, seconds):
         return int(seconds * float(self.fps) + 0.5)
