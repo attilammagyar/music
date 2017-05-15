@@ -30,7 +30,7 @@ version is also available.
 License
 -------
 
-助数詞のメタル (c) 2016 by Attila M. Magyar (ISWC: T-007270689-8)
+助数詞のメタル (c) 2016 by Attila M. Magyar (ISWC: T-007.270.689-8)
 
 助数詞のメタル is licensed under a
 Creative Commons Attribution-ShareAlike 3.0 Unported License.

@@ -29,7 +29,7 @@ using [MuseScore][ms]. For convenience, a PDF version is also available.
 License
 -------
 
-他動詞と自動詞のタンゴ (c) by Attila M. Magyar (ISWC: T-007273161-3)
+他動詞と自動詞のタンゴ (c) by Attila M. Magyar (ISWC: T-007.273.161-3)
 
 他動詞と自動詞のタンゴ is licensed under a
 Creative Commons Attribution-ShareAlike 3.0 Unported License.

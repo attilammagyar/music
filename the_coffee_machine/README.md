@@ -24,7 +24,7 @@ For convenience, a PDF version is also available.
 License
 -------
 
-The Coffee Machine (c) 2016 by Attila M. Magyar (ISWC: T-007270431-4)
+The Coffee Machine (c) 2016 by Attila M. Magyar (ISWC: T-007.270.431-4)
 
 The Coffee Machine is licensed under a
 Creative Commons Attribution-ShareAlike 3.0 Unported License.

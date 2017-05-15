@@ -41,7 +41,7 @@ version is also available.
 License
 -------
 
-TE-form song (cover) (c) by Attila M. Magyar
+TE-form song (cover) (c) by Attila M. Magyar (ISWC: T-007.277.486-7)
 
 TE-form song (cover) is licensed under a
 Creative Commons Attribution-ShareAlike 3.0 Unported License.
