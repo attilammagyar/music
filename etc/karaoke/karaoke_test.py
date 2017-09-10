@@ -328,8 +328,9 @@ s3-l1-n1 s3-l1-n2
 {WIDTH=2000}
 {HEIGHT=720}
 {LINE_DISTANCE=35}
+{FPS=100}
 
-{BPM=111}\\
+{BPM=60}\\
 {FONT=Font1}\\
 {TEXT_SIZE=100}\\
 {RUBY_SIZE=10}\\
@@ -344,8 +345,8 @@ s3-l1-n1 s3-l1-n2
 {HL2=#11ff80}\\
 {BALL=#11ffff}\\
 {BALL_SIZE=11}\\
-{1,note1|ruby1}\\
-{BPM=122}\\
+{1/4,note1|ruby1}\\
+{BPM=120}\\
 {FONT=Font2}\\
 {TEXT_SIZE=200}\\
 {RUBY_SIZE=20}\\
@@ -360,26 +361,26 @@ s3-l1-n1 s3-l1-n2
 {HL2=#22ff80}\\
 {BALL=#22ffff}\\
 {BALL_SIZE=22}\\
-{1,note2}
+{1/4,note2}
 {TEXT_SIZE=300}\\
 {RUBY_SIZE=30}\\
 {RUBY_DISTANCE=3}\\
-{1,note3|ruby3}
+{1/4,note3|ruby3}
 """
         self.assert_parsed(
             lyrics,
             {
                 "background": Style.GREEN,
-                "fps": 30,
+                "fps": 100,
                 "height": 720,
                 "width": 2000,
-                "last_frame": 183,
+                "last_frame": 200,
                 "stanzas": [
                     {
                         "height": 590,
                         "line_distance": 35,
                         "first_frame": 0,
-                        "last_frame": 183,
+                        "last_frame": 200,
                         "lines": [
                             {
                                 "left": 250,
@@ -387,7 +388,7 @@ s3-l1-n1 s3-l1-n2
                                 "width": 1500,
                                 "height": 222,
                                 "first_frame": 0,
-                                "last_frame": 124,
+                                "last_frame": 150,
                                 "line_distance": 35,
                                 "notes": [
                                     {
@@ -401,8 +402,8 @@ s3-l1-n1 s3-l1-n2
                                         "text_width": 500,
                                         "width": 500,
                                         "first_frame": 0,
-                                        "last_frame": 65,
-                                        "durations": [66],
+                                        "last_frame": 100,
+                                        "durations": [101],
                                         "text_top": 131,
                                         "text_left": 250,
                                         "ruby_top": 120,
@@ -411,7 +412,7 @@ s3-l1-n1 s3-l1-n2
                                         "style": {
                                             "border_color": (17, 224, 224),
                                             "border_width": 1,
-                                            "bpm": 111,
+                                            "bpm": 60,
                                             "font": "Font1",
                                             "hl1_color": (17, 128, 255),
                                             "hl2_color": (17, 255, 128),
@@ -436,9 +437,9 @@ s3-l1-n1 s3-l1-n2
                                         "text_color": (34, 255, 255),
                                         "text_width": 1000,
                                         "width": 1000,
-                                        "first_frame": 65,
-                                        "last_frame": 124,
-                                        "durations": [60],
+                                        "first_frame": 100,
+                                        "last_frame": 150,
+                                        "durations": [51],
                                         "text_top": 87,
                                         "text_left": 750,
                                         "ruby_top": 65,
@@ -447,7 +448,7 @@ s3-l1-n1 s3-l1-n2
                                         "style": {
                                             "border_color": (34, 224, 224),
                                             "border_width": 2,
-                                            "bpm": 122,
+                                            "bpm": 120,
                                             "font": "Font2",
                                             "hl1_color": (34, 128, 255),
                                             "hl2_color": (34, 255, 128),
@@ -469,8 +470,8 @@ s3-l1-n1 s3-l1-n2
                                 "middle_y": 433,
                                 "width": 1500,
                                 "height": 333,
-                                "first_frame": 124,
-                                "last_frame": 183,
+                                "first_frame": 150,
+                                "last_frame": 200,
                                 "line_distance": 35,
                                 "notes": [
                                     {
@@ -483,9 +484,9 @@ s3-l1-n1 s3-l1-n2
                                         "text_color": (34, 255, 255),
                                         "text_width": 1500,
                                         "width": 1500,
-                                        "first_frame": 124,
-                                        "last_frame": 183,
-                                        "durations": [60],
+                                        "first_frame": 150,
+                                        "last_frame": 200,
+                                        "durations": [51],
                                         "text_top": 299,
                                         "text_left": 250,
                                         "ruby_top": 266,
@@ -494,7 +495,7 @@ s3-l1-n1 s3-l1-n2
                                         "style": {
                                             "border_color": (34, 224, 224),
                                             "border_width": 2,
-                                            "bpm": 122,
+                                            "bpm": 120,
                                             "font": "Font2",
                                             "hl1_color": (34, 128, 255),
                                             "hl2_color": (34, 255, 128),

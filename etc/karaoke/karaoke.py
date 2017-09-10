@@ -7,6 +7,8 @@ import re
 import math
 import argparse
 
+from fractions import Fraction
+
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -461,7 +463,7 @@ class Parser:
         )
 
     def seconds_to_frames(self, seconds):
-        return int(seconds * float(self.fps) + 0.5)
+        return int(seconds * self.fps + Fraction(1, 2))
 
     def parse_durations(self, raw_durations):
         durations = []
@@ -470,16 +472,15 @@ class Parser:
             raw_durations = raw_durations[0:-1]
 
         for d in raw_durations.split(","):
-            whole_notes = 0.0
+            numerator, denominator = 0, 1
 
             if "/" in d:
                 numerator, denominator = d.split("/")
-                whole_notes = float(numerator) / float(denominator)
             else:
-                whole_notes = float(d)
+                numerator, denominator = d, 1
 
-            seconds = (whole_notes * 240.0) / float(self.style.bpm)
-            durations.append(seconds)
+            whole_notes = Fraction(int(numerator), int(denominator))
+            durations.append((whole_notes * 240) / self.style.bpm)
 
         return durations
 
