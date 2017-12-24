@@ -9,7 +9,7 @@ done in [Reaper][rp].
 Scores for the guitar tracks can be viewed and edited using [MuseScore][ms].
 
   [sc]: https://soundcloud.com/athoshun/binary-black-holes
-  [lmms]: http://lmms.sourceforge.net/home.php
+  [lmms]: https://lmms.io/
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/
 

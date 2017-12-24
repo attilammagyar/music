@@ -22,7 +22,7 @@ version is also available.
 
   [sc]: https://soundcloud.com/athoshun/josuushi-no-metaru
   [yt]: https://www.youtube.com/watch?v=ywXFBj9gbOw
-  [lmms]: http://lmms.sourceforge.net/home.php
+  [lmms]: https://lmms.io/
   [voc]: http://www.vocaloid.com
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/

@@ -33,7 +33,7 @@ Scores can be viewed and edited using [MuseScore][ms]. For convenience, a PDF
 version is also available.
 
   [sc]: https://soundcloud.com/athoshun/te-form-song
-  [lmms]: http://lmms.sourceforge.net/home.php
+  [lmms]: https://lmms.io/
   [voc]: http://www.vocaloid.com
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/

@@ -17,7 +17,7 @@ Scores for the guitar tracks can be viewed and edited using [MuseScore][ms].
 For convenience, a PDF version is also available.
 
   [sc]: https://soundcloud.com/athoshun/the-coffee-machine
-  [lmms]: http://lmms.sourceforge.net/home.php
+  [lmms]: https://lmms.io/
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/
 

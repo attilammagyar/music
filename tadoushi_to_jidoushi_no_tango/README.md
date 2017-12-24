@@ -23,7 +23,7 @@ using [MuseScore][ms]. For convenience, a PDF version is also available.
 
   [sc]: https://soundcloud.com/athoshun/tadoushi-to-jidoushi-no-tango
   [yt]: https://www.youtube.com/watch?v=94g7_1C0Ka4
-  [lmms]: http://lmms.sourceforge.net/home.php
+  [lmms]: https://lmms.io/
   [ms]: http://musescore.org/
 
 License
