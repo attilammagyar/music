@@ -10,7 +10,7 @@ Read about the Aestivation Hypothesis [with equations][we] or
 [video essay][vid] on the topic.
 
   [we]: https://arxiv.org/abs/1705.03394
-  [woe]: http://aleph.se/andart2/space/the-ae%E2%80%A6lar-outline-and-faq/
+  [woe]: https://aleph.se/andart2/space/the-aestivation-hypothesis-popular-outline-and-faq/
   [vid]: https://www.youtube.com/watch?v=v9sh9NpL4i8
 
 License
