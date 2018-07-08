@@ -11,9 +11,10 @@ work. If not, see [CC-BY-SA 3.0][ccbysa30]
 Gear and Setup
 --------------
  * Notation: [MuseScore][musescore]
- * Guitar: [Dean Vendetta XM][vendettaxm]
- * Strings: [D'Addario EXL115][exl115]
- * Guitar Effects, Amp Simulation:
+ * Guitar Effects, Amp Simulation (signal chain):
+    * Guitar: [Dean Vendetta XM][vendettaxm]
+       * Tuning: E-standard, D-standard
+       * Strings: [D'Addario EXL115][exl115]
     * [BOSS NS-2][ns2]:
        * Threshold: 10 o'clock
        * Decay: min
@@ -41,7 +42,7 @@ Gear and Setup
           * Level/NR/Cab:
              * Level: 5.0
              * Noise Reduction Sensitivity: 7.7
-             * Cabinet Model: C6
+             * Cabinet Model: C6 (AC30TBX)
           * Mod: off
           * Delay/Reverb: off
        * Program 2:
@@ -56,7 +57,7 @@ Gear and Setup
           * Level/NR/Cab:
              * Level: 5.0
              * Noise Reduction Sensitivity: 7.7
-             * Cabinet Model: C8
+             * Cabinet Model: C8 (UK T75)
           * Mod: off
           * Delay/Reverb: off
        * Program 3 and 4: like Program 1 and 2, but
@@ -65,7 +66,43 @@ Gear and Setup
              * P1 (Time): 3.3
              * P2 (Feedback): 7.0
              * P3 (Tone): 5.3
- * Input: [Behringer UCG102][ucg102]
+       * Program 5:
+          * PreFX: off
+          * Drive/Amp: A0 (Boutique Clean)
+             * Gain: 5.0
+             * P1 (Treble): 6.3
+             * P2 (Middle): 8.0
+             * P3 (Bass): 7.7
+             * P4 (Volume): 9.7
+             * P5 (Amp/Line): A1 (connected to a clean sounding amp)
+          * Level/NR/Cab:
+             * Level: 10.0
+             * Noise Reduction Sensitivity: 7.7
+             * Cabinet Model: C9 (US V30)
+          * Mod: off
+          * Delay/Reverb: off
+       * Program 6:
+          * PreFX: off
+          * Drive/Amp: A0 (Boutique Clean)
+             * Gain: 5.0
+             * P1 (Treble): 6.3
+             * P2 (Middle): 8.0
+             * P3 (Bass): 7.7
+             * P4 (Volume): 9.7
+             * P5 (Amp/Line): A1 (connected to a clean sounding amp)
+          * Level/NR/Cab:
+             * Level: 10.0
+             * Noise Reduction Sensitivity: 7.7
+             * Cabinet Model: C6 (AC30TBX)
+          * Mod: off
+          * Delay/Reverb: off
+       * Program 7 and 8: like Program 5 and 6, but
+          * Delay/Reverb: F3 (Stereo Delay)
+             * Mix: 2.7
+             * P1 (Time): 3.3
+             * P2 (Feedback): 7.0
+             * P3 (Tone): 5.3
+    * Input: [Behringer UCG102][ucg102]
  * MIDI: [Alesis Q49][q49]
  * Drums, Synths, Samplers, Sequencers, etc.: [LMMS][lmms]
  * Piano: [mda Piano][mdapiano]
