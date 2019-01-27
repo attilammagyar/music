@@ -5,7 +5,7 @@ Recording is available at [SoundCloud][sc].
 
   [sc]: https://soundcloud.com/athoshun/cafe-deadbeef
 
-A song where the notes spell words:
+A musical spelling bee:
 
     cafe deadbeef
     decaf cafe
