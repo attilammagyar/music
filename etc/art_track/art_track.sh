@@ -1,31 +1,35 @@
 #!/bin/bash
 
-freq_color="0x668eff@1.0"
-wave_color="0xcddaff@0.85"
+freq_color="0x606060@1.0"
+fps=30
+
+frame_step=2
+mintfps=$(($fps*$frame_step))
 
 ffmpeg \
     -i audio.mp3 \
-    -r 60 \
+    -r $fps \
     -loop 1 \
     -i background.png \
     -i grid.png \
     -filter_complex \
-    "[2:v]crop=1880:300:20:760[grid]; \
-     [0:a]showfreqs=mode=bar:win_size=w2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=42x300[sfb]; \
-     [sfb]crop=40:300:0:0[sfbc]; \
-     [sfbc]minterpolate=180,tblend=all_mode=average,framestep=3[sfbci]; \
-     [sfbci]scale=1880x300:flags=neighbor[sfbcis]; \
-     [sfbcis][grid]overlay[sfg]; \
-     [0:a]aformat=channel_layouts=mono,showwaves=s=1880x201:rate=60:split_channels=0:colors=$wave_color:mode=cline[sw]; \
-     [sw]scale=1880x402:flags=fast_bilinear[sws]; \
-     [1:v][sfg]overlay=x=20:y=760[tmp]; \
-     [tmp][sws]overlay=shortest=1:x=20:y=480:format=yuv420[tmp2]; \
-     [tmp2]fade=in:0:36[out]" \
+    "[2:v]crop=1888:320:16:744[grid]; \
+     [0:a]channelsplit[al][ar]; \
+     [al]pan=stereo|c0=FL|c1=FL[afl]; \
+     [ar]pan=stereo|c0=FR|c1=FR[afr]; \
+     [afl]showfreqs=mode=bar:win_size=w2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfl]; \
+     [afr]showfreqs=mode=bar:win_size=w2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfr]; \
+     [sfl]minterpolate=$mintfps,tblend=all_mode=average,framestep=$frame_step,scale=944x320:flags=neighbor,hflip[sfli]; \
+     [sfr]minterpolate=$mintfps,tblend=all_mode=average,framestep=$frame_step,scale=944x320:flags=neighbor[sfri]; \
+     [sfli]pad=1888:360:0:0:0x000000@0.0[sflip]; \
+     [sflip][sfri]overlay=944:0[sf]; \
+     [sf][grid]overlay[sfg]; \
+     [1:v][sfg]overlay=16:744:shortest=1,fade=in:0:$fps[out]" \
     -map "[out]" \
     -map 0:a \
     -c:v libx264 \
     -preset slow \
     -crf 10 \
     -c:a copy \
-    -r 60 \
+    -r $fps \
     art_track.mkv
