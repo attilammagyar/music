@@ -9,6 +9,11 @@ import multiprocessing as mp
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageChops
 
 
+# NOTE: instead of a celestial sphere, this script just tiles a flat image
+# behind and in front of the virtual camera - this is a hack that I used for
+# rendering cover art for a song, the original purpose of this script.
+
+
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -40,23 +45,25 @@ SNEAK_PEEK_PERCENT = 5
 def render_black_hole(
         bg_file_name,
         disk_file_name,
+        disk_color_shift_file_name,
         raw_out_file_name,
         glow_out_file_name,
         out_size=(320, 180),
-        black_hole=(0.0, -0.42, 29.5),
-        disk_angles=(-4.5, 0.0, 5.0),
-        disk_radius=11.5,
-        disk_rotation=0.0,
+        black_hole=(0.5, -0.28, 31.0),
+        disk_angles=(-1.7, 0.0, 3.5),
+        disk_radius=17.25,
+        disk_rotation=123.0,
+        disk_color_shift=0.8,
         field_of_view=120.0,
         horizon_z=10000.0,
-        bg_scale=1.0,
-        bg_shift=(0.0, 0.0),
-        glow_brightness=1.1,
+        bg_scale=1.5,
+        bg_shift=(0, 0),
+        glow_brightness=1.14,
         glow_contrast=1.7,
-        glow_blur_radius=60.0,
-        glow_alpha=0.3,
+        glow_blur_radius=12.0,
+        glow_alpha=0.32,
         high_quality=False,
-        iters=350,
+        iters=360,
         renderer_threads=3,
         sneak_peek=True
 ):
@@ -64,6 +71,7 @@ def render_black_hole(
 
     bg_img = Image.open(bg_file_name)
     disk_img = Image.open(disk_file_name)
+    disk_color_shift_img = Image.open(disk_color_shift_file_name)
     raw_out_img = Image.new("RGB", out_size, BLACK)
     glow_out_img = Image.new("RGB", out_size, BLACK)
     draw = ImageDraw.Draw(raw_out_img)
@@ -164,7 +172,7 @@ def render_black_hole(
             colors = collect_colors(
                 rays,
                 bg_img, bg_canvas, bg_scale, bg_shift,
-                disk_img, disk_canvas,
+                disk_img, disk_color_shift_img, disk_color_shift, disk_canvas,
                 pick_color
             )
             draw.point((x, y), color_avg(colors, weights))
@@ -215,7 +223,7 @@ def progress(all_pixels, started, done_pixels):
 def collect_colors(
         rays,
         bg_img, bg_canvas, bg_scale, bg_shift,
-        disk_img, disk_canvas,
+        disk_img, disk_color_shift_img, disk_color_shift, disk_canvas,
         pick_color
 ):
     colors = []
@@ -241,17 +249,33 @@ def collect_colors(
         if disk_hits:
             disk_colors = []
 
-            for dh in disk_hits:
+            for dh, dcsh in disk_hits:
                 dh = (
                     dh[X] * disk_canvas[3],
                     dh[Y] * disk_canvas[4],
                     disk_canvas[Z]
                 )
+                dcsh = (
+                    dcsh[X] * disk_canvas[3],
+                    dcsh[Y] * disk_canvas[4],
+                    disk_canvas[Z]
+                )
+                dc = pick_color(
+                    disk_img,
+                    to_image_float(dh, disk_canvas),
+                    disk_canvas
+                )
+                csc = pick_color(
+                    disk_color_shift_img,
+                    to_image_float(dcsh, disk_canvas),
+                    disk_canvas
+                )
+                sdc = list(blend_colors(csc, dc))
+                sdc[ALPHA] = dc[ALPHA]
                 disk_colors.append(
-                    pick_color(
-                        disk_img,
-                        to_image_float(dh, disk_canvas),
-                        disk_canvas
+                    vsum(
+                        scale(1.0 - disk_color_shift, dc),
+                        scale(disk_color_shift, tuple(sdc))
                     )
                 )
 
@@ -458,10 +482,10 @@ def find_disk_hit(
 
         if 1.0 <= intersection_norm and intersection_norm <= disk_radius:
             # the disk's base in 3D is ((1, 0, 0), (0, 0, 0), (0, 0, 1))
-            disk_hit = (intersection[X], intersection[Z])
-            disk_hit = mul(disk_rot2, disk_hit)
+            disk_color_shift_hit = (intersection[X], intersection[Z])
+            disk_hit = mul(disk_rot2, disk_color_shift_hit)
 
-            return scale_inv(disk_radius, disk_hit)
+            return scale_inv(disk_radius, disk_hit), scale_inv(disk_radius, disk_color_shift_hit)
 
     return None
 
@@ -475,7 +499,11 @@ def norm(v):
 
 
 def dot(a, b):
-    return sum(ai * bi for ai, bi in zip(a, b))
+    return sum(vmul(a, b))
+
+
+def vmul(a, b):
+    return tuple(ai * bi for ai, bi in zip(a, b))
 
 
 def vsum(a, b):
@@ -618,26 +646,32 @@ def format_time(seconds):
     )
 
 
-render_black_hole(
-    "background.png",
-    "disk.png",
-    "/tmp/black_hole.png",
-    "/tmp/black_hole_glow.png",
-    (320, 180),
-    black_hole=(0.0, -0.42, 29.5),
-    disk_angles=(-4.5, 0.0, 5.0),
-    disk_radius=11.5,
-    disk_rotation=25.0,
-    field_of_view=120.0,
-    horizon_z=10000.0,
-    bg_scale=1.4,
-    bg_shift=(0.0, 0.0),
-    glow_brightness=1.1,
-    glow_contrast=1.7,
-    glow_blur_radius=12.0,
-    glow_alpha=0.3,
-    high_quality=False,
-    iters=350,
-    renderer_threads=3,
-    sneak_peek=True
-)
+def main(argv):
+    render_black_hole(
+        "background.png",
+        "disk.png",
+        "disk_color_shift.png",
+        "black_hole.png",
+        "black_hole_glow.png",
+        (3840, 2160),
+        black_hole=(0.5, -0.28, 31.0),
+        disk_angles=(-1.7, 0.0, 3.5),
+        disk_radius=17.25,
+        disk_rotation=123.0,
+        disk_color_shift=0.8,
+        field_of_view=120.0,
+        horizon_z=10000.0,
+        bg_scale=1.5,
+        bg_shift=(0.0, 0.0),
+        glow_brightness=1.14,
+        glow_contrast=1.7,
+        glow_blur_radius=60.0,
+        glow_alpha=0.32,
+        high_quality=True,
+        iters=450,
+        renderer_threads=11,
+        sneak_peek=False
+    )
+
+
+main(sys.argv)
