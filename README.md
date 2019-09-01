@@ -22,11 +22,11 @@ Gear and Setup
     * [BOSS BD-2][bd2]:
        * Level: 10:30 o'clock
        * Tone: max
-       * Gain: 9:15 o'clock
+       * Gain: 10:30 o'clock
     * [BOSS OS-2][os2]:
        * Level: 1 o'clock
        * Tone: 2 o'clock
-       * Drive: 10:30 o'clock
+       * Drive: 11:00 o'clock
        * Color: 2:30 o'clock
     * [KORG AX5G][ax5g] (frequently used settings):
        * Expression Pedal: Volume (min: 5.3, max: 10)
@@ -102,6 +102,45 @@ Gear and Setup
              * P1 (Time): 3.3
              * P2 (Feedback): 7.0
              * P3 (Tone): 5.3
+       * Program 9 and 10: like Program 4 and 3, but
+          * PreFX: F6 (Chorus/Flanger)
+             * Speed: 3.7
+             * P1 (Depth): 2.3
+             * P2 (Reso): 0.0
+             * P3 (Manual): 7.3
+       * Program 11: like Program 1, but
+          * PreFX: F8 (Ring Modulator)
+             * Osc Freq: 7.0
+             * P1 (Effect): 8.0
+             * P2 (Direct): 10.0
+             * P3 (Filter): 5.0
+          * Mod: F0 (Classic Chorus)
+             * Speed: 9.0
+             * P1 (Depth): 10.0
+             * P2 (Manual): 8.0
+             * P3 (Mode): 1
+          * Delay/Reverb: F9 (Hall)
+             * Mix: 3.3
+             * P1 (Time): 6.0
+             * P2 (Hi Damp): 2.0
+             * P3 (Lo Damp): 2.0
+       * Program 12: like Program 2, but
+          * PreFX: F6 (Chorus/Flanger)
+             * Speed: 3.7
+             * P1 (Depth): 2.3
+             * P2 (Reso): 2.0
+             * P3 (Manual): 7.3
+          * Mod: F4 (Duo Phaser)
+             * Speed 1: 3.3
+             * P1 (Speed 2): 5.0
+             * P2 (Depth): 6.3
+             * P3 (Reso): 2.3
+             * P4 (Mode): 5
+          * Delay/Reverb: F6 (Spring)
+             * Mix: 4.0
+             * P1 (Time): 5.0
+             * P2 (Hi Damp): 3.0
+             * P3 (Lo Damp): 4.0
     * Input: [Behringer UCG102][ucg102]
  * MIDI: [Alesis Q49][q49]
  * Drums, Synths, Samplers, Sequencers, etc.: [LMMS][lmms]
