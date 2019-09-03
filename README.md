@@ -26,7 +26,7 @@ Gear and Setup
     * [BOSS OS-2][os2]:
        * Level: 1 o'clock
        * Tone: 2 o'clock
-       * Drive: 11:00 o'clock
+       * Drive: 11 o'clock
        * Color: 2:30 o'clock
     * [KORG AX5G][ax5g] (frequently used settings):
        * Expression Pedal: Volume (min: 5.3, max: 10)
@@ -102,7 +102,7 @@ Gear and Setup
              * P1 (Time): 3.3
              * P2 (Feedback): 7.0
              * P3 (Tone): 5.3
-       * Program 9 and 10: like Program 4 and 3, but
+       * Program 9 and 10: like Program 3 and 4, but
           * PreFX: F6 (Chorus/Flanger)
              * Speed: 3.7
              * P1 (Depth): 2.3
@@ -141,6 +141,11 @@ Gear and Setup
              * P1 (Time): 5.0
              * P2 (Hi Damp): 3.0
              * P3 (Lo Damp): 4.0
+       * Program 13 and 14: like Program 3 and 4, but
+          * PreFX: F3 (Slow Attack)
+             * Attack: 10.0
+          * Delay/Reverb: F3 (Stereo Delay)
+             * Mix: 3.3
     * Input: [Behringer UCG102][ucg102]
  * MIDI: [Alesis Q49][q49]
  * Drums, Synths, Samplers, Sequencers, etc.: [LMMS][lmms]
