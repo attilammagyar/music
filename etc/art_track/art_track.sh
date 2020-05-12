@@ -7,7 +7,7 @@ frame_step=2
 mintfps=$(($fps*$frame_step))
 
 ffmpeg \
-    -i audio.mp3 \
+    -i audio.wav \
     -r $fps \
     -loop 1 \
     -i background.png \
@@ -28,8 +28,12 @@ ffmpeg \
     -map "[out]" \
     -map 0:a \
     -c:v libx264 \
-    -preset slow \
-    -crf 10 \
-    -c:a copy \
+    -preset veryslow \
+    -crf 16 \
+    -c:a aac \
+    -b:a 384k \
+    -cutoff 19000 \
+    -pix_fmt yuv420p \
+    -movflags +faststart \
     -r $fps \
-    art_track.mkv
+    art_track.mp4
