@@ -29,7 +29,7 @@ Gear and Setup
        * Drive: 11 o'clock
        * Color: 2:30 o'clock
     * [KORG AX5G][ax5g] (frequently used settings):
-       * Expression Pedal: Volume (min: 5.3, max: 10)
+       * Expression Pedal Assignment: Volume (min: 5.3, max: 10.0)
        * Program 1:
           * PreFX: off
           * Drive/Amp: A1 (Black 2x12)
@@ -146,6 +146,75 @@ Gear and Setup
              * Attack: 10.0
           * Delay/Reverb: F3 (Stereo Delay)
              * Mix: 3.3
+       * Program 15:
+          * PreFX: F2 (Acoustic simulator)
+             * Top: 10.0
+             * P1 (Body): 8.3
+             * P2 (Type): 3
+             * P3 (Mix): 7.0
+          * Drive/Amp: off
+          * Level/NR/Cab:
+             * Level: 5.0
+             * Noise Reduction Sensitivity: 7.7
+          * Mod: off
+          * Delay/Reverb: off
+       * Program 16 like Program 2, but:
+          * PreFX: F5 (U-Vibe/Phaser)
+            * Speed: 7.0
+            * P1 (Depth): 5.0
+            * P2 (Order): Pr
+            * P3 (Type): U2
+            * P4 (Manual): 1.0
+          * Mod: F8 (Random Step Filter)
+             * Speed: 7.3
+             * P1 (Mix): 8.0
+             * P2 (Resonance): 8.0
+             * P3 (Manual): 8.0
+             * P4 (Depth): 8.7
+          * Delay/Reverb: F3 (Stereo Delay)
+             * Mix: 10.0
+             * P1 (Time): 9.0
+             * P2 (Feedback): 9.7
+             * P3 (Tone): 8.7
+          * Expression Pedal Assignment: FX Param (min: 0.0, max: 10.0)
+       * Program 17 like Program 16, but:
+          * Mod: F8 (Random Step Filter)
+             * Speed: 7.3
+             * P1 (Mix): 8.0
+             * P2 (Resonance): 7.0
+             * P3 (Manual): 8.0
+             * P4 (Depth): 9.0
+          * Delay/Reverb: F3 (Stereo Delay)
+             * Mix: 8.0
+             * P1 (Time): 9.0
+             * P2 (Feedback): 9.0
+             * P3 (Tone): 6.0
+          * Expression Pedal Assignment: FX Param (min: 0.0, max: 10.0)
+       * Program 18:
+          * PreFX: F3 (Slow Attack)
+             * Attack: 10.0
+          * Drive/Amp: A5 (UK 80)
+             * Gain: 10.0
+             * P1 (Treble): 7.0
+             * P2 (Middle): 9.3
+             * P3 (Bass): 5.0
+             * P4 (Volume): 6.0
+             * P5 (Amp/Line): A3 (connected to a stack, 4x12 closed-back cab.)
+          * Level/NR/Cab:
+             * Level: 5.0
+             * Noise Reduction Sensitivity: 7.7
+             * Cabinet Model: C8 (UK T75)
+          * Mod: F2 (Classic Flanger)
+             * Speed: 1.7
+             * P1 (Resonance): 6.0
+             * P2 (Depth): 7.0
+             * P3 (Manual): 5.0
+             * P4 (Mix): 6.0
+          * Delay/Reverb: F6 (Spring)
+             * Mix: 7.0
+             * P1 (Time): 6.3
+             * P2 (Hi Damp): 5.0
+             * P3 (Lo Damp): 4.0
     * Input: [Behringer UCG102][ucg102]
  * MIDI: [Alesis Q49][q49]
  * Drums, Synths, Samplers, Sequencers, etc.: [LMMS][lmms]
