@@ -1,0 +1,15 @@
+#canvas {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    border: solid 0.1vw blue;
+    width: 64vw;
+    height: 36vw;
+    overflow: hidden;
+}
+
+#controls {
+    position: absolute;
+    top: 1vw;
+    left: 66vw;
+}
