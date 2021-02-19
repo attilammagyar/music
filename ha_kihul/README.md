@@ -24,7 +24,7 @@ is available at [SoundCloud][sc].
 License
 -------
 
-Ha kihűl... (c) 2020 by Attila M. Magyar
+Ha kihűl... (c) 2020 by Attila M. Magyar (ISWC: T-301.369.538-6)
 
 Ha kihűl... is licensed under a Creative Commons Attribution-ShareAlike 3.0
 Unported License.
