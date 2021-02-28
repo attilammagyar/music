@@ -31,7 +31,7 @@ ffmpeg \
     -preset veryslow \
     -crf 16 \
     -c:a aac \
-    -b:a 384k \
+    -b:a 192k \
     -cutoff 19000 \
     -pix_fmt yuv420p \
     -movflags +faststart \
