@@ -9,8 +9,6 @@ import argparse
 import json
 import time
 
-from fractions import Fraction
-
 from PIL import Image, ImageDraw, ImageMath
 
 
