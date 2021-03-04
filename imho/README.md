@@ -1,20 +1,6 @@
 imho
 ====
 
-A case study in musical steganography, involving the following techniques to
-hide an insult in the recording:
-
- * notes that make letters on the sheet music
- * notes that make letters on the fretboard of the guitar
- * a riff which is played on the guitar using a common hand gesture
- * a Morse code based riff
- * the F Dm C C Dm chord progression in G minor, which starts to resemble a
-   hidden message when the Dm is written with Roman numeral (v) if you squint
-   your eyes hard enough
- * a noise which reveals the message on its spectrogram
- * a message can also be heard if the recording is sped up a lot (around 10x)
-   or reversed
-
 Recording is available at [SoundCloud][sc].
 
 Synths were made in [LMMS][lmms], guitar recording and mixing were done in
