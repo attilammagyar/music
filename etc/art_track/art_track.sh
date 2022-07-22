@@ -17,8 +17,8 @@ ffmpeg \
      [0:a]channelsplit[al][ar]; \
      [al]pan=stereo|c0=FL|c1=FL[afl]; \
      [ar]pan=stereo|c0=FR|c1=FR[afr]; \
-     [afl]showfreqs=mode=bar:win_size=w2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfl]; \
-     [afr]showfreqs=mode=bar:win_size=w2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfr]; \
+     [afl]showfreqs=mode=bar:win_size=2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfl]; \
+     [afr]showfreqs=mode=bar:win_size=2048:ascale=log:fscale=log:colors=$freq_color|$freq_color:s=60x320,crop=59:320:0:0[sfr]; \
      [sfl]minterpolate=$mintfps,tblend=all_mode=average,framestep=$frame_step,scale=944x320:flags=neighbor,hflip[sfli]; \
      [sfr]minterpolate=$mintfps,tblend=all_mode=average,framestep=$frame_step,scale=944x320:flags=neighbor[sfri]; \
      [sfli]pad=1888:360:0:0:0x000000@0.0[sflip]; \

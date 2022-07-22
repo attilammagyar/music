@@ -19,7 +19,7 @@ Usage
    copy from your background image where every pixel is transparent, except for
    those where the mask is white. Save this image as `grid.png`. This image
    will be used for separating the bars of the audio power spectrum display.
- * Make a copy of your song in high-quality MP3 format as `audio.mp3`.
+ * Make a copy of your song in high-quality MP3 format as `audio.wav`.
  * Run `art_track.sh` (make sure that a recent version of [FFmpeg][ffmpeg] is
    on your `PATH`) to generate `art_track.mkv`.
 
