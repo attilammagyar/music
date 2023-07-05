@@ -216,10 +216,15 @@ Gear and Setup
              * P2 (Hi Damp): 5.0
              * P3 (Lo Damp): 4.0
     * Input: [Behringer UCG102][ucg102]
- * MIDI: [Alesis Q49][q49]
+ * MIDI:
+    * [Alesis Q49][q49]
+    * [Arturia Keystep 37][ks37]
+    * [M-Audio SP 2][sp2]
  * Drums, Synths, Samplers, Sequencers, etc.: [LMMS][lmms]
  * Piano: [mda Piano][mdapiano]
- * Synth: [ZynAddSubFX][zynaddsubfx]
+ * Synth:
+    * [JS80P][js80p]
+    * [ZynAddSubFX][zynaddsubfx]
  * Singing Synth: [Vocaloid][vocaloid], [Yukari Lin][yukarilin]
  * DAW: [Reaper][reaper]
 
@@ -231,9 +236,12 @@ Gear and Setup
   [os2]: https://www.boss.info/us/products/os-2/
   [ax5g]: http://www.korg.com/us/support/download/manual/1/35/1748/
   [q49]: http://www.alesis.com/products/legacy/q49
+  [ks37]: https://www.arturia.com/products/hybrid-synths/keystep-37/overview
+  [sp2]: https://m-audio.com/products/view/sp-2
   [ucg102]: http://www.musictri.be/Categories/Behringer/Computer-Audio/Interfaces/UCG102/p/P0198
   [lmms]: https://lmms.io/
   [mdapiano]: http://mda.smartelectronix.com/synths.htm
+  [js80p]: https://attilammagyar.github.io/js80p/
   [zynaddsubfx]: http://zynaddsubfx.sourceforge.net/
   [vocaloid]: https://www.vocaloid.com/en/
   [yukarilin]: https://www.vocaloid.com/en/articles/yuzukiyukari
