@@ -6,9 +6,11 @@ chord progressions in Bb Harmonic Major, because sitting at home in
 self-isolation while playing around with music theory is slightly better than
 sitting at home in self-isolation in fear and anxiety. :-)
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
   [sc]: https://soundcloud.com/athoshun/covid-19-in-bb-harmonic-major
+  [bc]: https://athoshun.bandcamp.com/track/covid-19-in-bb-harmonic-major
 
 License
 -------

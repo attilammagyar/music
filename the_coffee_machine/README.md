@@ -4,7 +4,7 @@ The Coffee Machine
 A song inspired by and featuring the sound of the coffee machine at the office.
 :-)
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc].
 
 Drums and synths (backing track) were made in [LMMS][lmms] and rendered into
 individual tracks, which were then mixed with the recorded guitars and with

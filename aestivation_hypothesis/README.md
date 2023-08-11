@@ -1,9 +1,11 @@
 Aestivation Hypothesis
 ======================
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
   [sc]: https://soundcloud.com/athoshun/aestivation-hypothesis
+  [bc]: https://athoshun.bandcamp.com/track/aestivation-hypothesis
 
 Read about the Aestivation Hypothesis [with equations][we] or
 [without equations][woe], or watch Isaac Arthur's excellent

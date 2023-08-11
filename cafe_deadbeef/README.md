@@ -1,9 +1,11 @@
 Cafe Deadbeef
 =============
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
   [sc]: https://soundcloud.com/athoshun/cafe-deadbeef
+  [bc]: https://athoshun.bandcamp.com/track/cafe-deadbeef
 
 A musical spelling bee:
 

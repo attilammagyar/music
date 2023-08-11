@@ -1,9 +1,11 @@
 May May Come
 ============
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
   [sc]: https://soundcloud.com/athoshun/may-may-come
+  [bc]: https://athoshun.bandcamp.com/track/may-may-come
 
 License
 -------

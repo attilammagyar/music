@@ -12,7 +12,8 @@ cover the former.
 
 I'd like to say thank you to 真紀 for reviewing the lyrics.
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
 Drums and synths were made in [LMMS][lmms], the vocals were generated using
 [Vocaloid][voc], and mixing was done in [Reaper][rp].
@@ -21,6 +22,7 @@ Scores can be viewed and edited using [MuseScore][ms]. For convenience, a PDF
 version is also available.
 
   [sc]: https://soundcloud.com/athoshun/josuushi-no-metaru
+  [bc]: https://athoshun.bandcamp.com/album/nihongometal
   [lmms]: https://lmms.io/
   [voc]: http://www.vocaloid.com
   [rp]: http://www.reaper.fm/

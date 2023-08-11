@@ -1,7 +1,8 @@
 Frostwork
 =========
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
 Synths were made in [LMMS][lmms], guitar recording and mixing were done in
 [Reaper][rp].
@@ -9,6 +10,7 @@ Synths were made in [LMMS][lmms], guitar recording and mixing were done in
 Scores can be viewed and edited using [MuseScore][ms].
 
   [sc]: https://soundcloud.com/athoshun/frostwork
+  [bc]: https://athoshun.bandcamp.com/track/frostwork
   [lmms]: https://lmms.io/
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/

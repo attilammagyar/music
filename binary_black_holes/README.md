@@ -1,7 +1,8 @@
 Binary Black Holes
 ==================
 
-Recording is available at [SoundCloud][sc].
+Recording is available on [SoundCloud][sc] and in lossless formats on
+[Bandcamp][bc].
 
 Drums and synths were made in [LMMS][lmms], guitar recording and mixing were
 done in [Reaper][rp].
@@ -9,6 +10,7 @@ done in [Reaper][rp].
 Scores for the guitar tracks can be viewed and edited using [MuseScore][ms].
 
   [sc]: https://soundcloud.com/athoshun/binary-black-holes
+  [bc]: https://athoshun.bandcamp.com/track/binary-black-holes
   [lmms]: https://lmms.io/
   [rp]: http://www.reaper.fm/
   [ms]: http://musescore.org/

@@ -2,9 +2,10 @@ Ha kihűl...
 ===========
 
 A satirical poem accompanied by music, about dog poop on the streets. Recording
-is available at [SoundCloud][sc].
+is available on [SoundCloud][sc] and in lossless formats on [Bandcamp][bc].
 
   [sc]: https://soundcloud.com/athoshun/ha-kihul
+  [bc]: https://athoshun.bandcamp.com/track/ha-kih-l
 
     Kicsi, barna kupac,   eltévedve, árván,
     Novemberi ködben   ott pihen a járdán.
